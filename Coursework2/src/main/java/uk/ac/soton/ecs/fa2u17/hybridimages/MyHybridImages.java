@@ -89,82 +89,95 @@ public class MyHybridImages {
 
     }
 
-    public static void main(String[] args) {
-
-        MBFImage image_FRAME1;
-        MBFImage image_FRAME2;
-        MBFImage image_FRAME3;
-        MBFImage image_FRAME4;
-        MBFImage image_FRAME5;
-
-
-        try {
-
-            MBFImage hybridImage;
-
-            MBFImage dog = ImageUtilities.readMBF(new File("/Users/filipandonie/desktop/projects/ComputerVision/Coursework2/data/dog.bmp"));
-            MBFImage cat = ImageUtilities.readMBF(new File("/Users/filipandonie/desktop/projects/ComputerVision/Coursework2/data/cat.bmp"));
-            hybridImage = makeHybrid(dog,10,cat,10);
-            image_FRAME1 = new MBFImage(dog.getWidth()*2, dog.getHeight());
-            image_FRAME1.fill(RGBColour.LIGHT_GRAY);
-            image_FRAME1.drawImage(hybridImage,0,0);
-            image_FRAME1.drawImage(ResizeProcessor.halfSize(hybridImage),hybridImage.getWidth() + 1, hybridImage.getHeight()/2);
-            image_FRAME1.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)), (int) (hybridImage.getWidth()* 1.5 + 1), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2);
-            image_FRAME1.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage))), (int) (hybridImage.getWidth()* 1.75 + 1), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)).getHeight()/2);
-            image_FRAME1.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)))), (int) (hybridImage.getWidth()* 1.875 + 1), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage))).getHeight()/2);
-            DisplayUtilities.display(image_FRAME1);
-
-            MBFImage bicycle = ImageUtilities.readMBF(new File("/Users/filipandonie/desktop/projects/ComputerVision/Coursework2/data/bicycle.bmp"));
-            MBFImage motorcycle = ImageUtilities.readMBF(new File("/Users/filipandonie/desktop/projects/ComputerVision/Coursework2/data/motorcycle.bmp"));
-            hybridImage = makeHybrid(motorcycle,4,bicycle,4);
-            image_FRAME2 = new MBFImage(bicycle.getWidth()*2, motorcycle.getHeight());
-            image_FRAME2.fill(RGBColour.LIGHT_GRAY);
-            image_FRAME2.drawImage(hybridImage,0,0);
-            image_FRAME2.drawImage(ResizeProcessor.halfSize(hybridImage),hybridImage.getWidth() + 1, hybridImage.getHeight()/2);
-            image_FRAME2.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)), (int) (hybridImage.getWidth()* 1.5 + 1), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2);
-            image_FRAME2.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage))), (int) (hybridImage.getWidth()* 1.75 + 1), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)).getHeight()/2);
-            image_FRAME2.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)))), (int) (hybridImage.getWidth()* 1.875 + 1), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage))).getHeight()/2);
-            DisplayUtilities.display(image_FRAME2);
-
-            MBFImage marilyn = ImageUtilities.readMBF(new File("/Users/filipandonie/desktop/projects/ComputerVision/Coursework2/data/marilyn.bmp"));
-            MBFImage einstein = ImageUtilities.readMBF(new File("/Users/filipandonie/desktop/projects/ComputerVision/Coursework2/data/einstein.bmp"));
-            hybridImage = makeHybrid(marilyn,4,einstein,4);
-            image_FRAME3 = new MBFImage(marilyn.getWidth()*2, marilyn.getHeight());
-            image_FRAME3.fill(RGBColour.LIGHT_GRAY);
-            image_FRAME3.drawImage(hybridImage,0,0);
-            image_FRAME3.drawImage(ResizeProcessor.halfSize(hybridImage),hybridImage.getWidth() + 1, hybridImage.getHeight()/2);
-            image_FRAME3.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)), (int) (hybridImage.getWidth()* 1.5 + 1), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2);
-            image_FRAME3.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage))), (int) (hybridImage.getWidth()* 1.75 + 1), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)).getHeight()/2);
-            image_FRAME3.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)))), (int) (hybridImage.getWidth()* 1.875 + 1), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage))).getHeight()/2);
-            DisplayUtilities.display(image_FRAME3);
-
-            MBFImage bird = ImageUtilities.readMBF(new File("/Users/filipandonie/desktop/projects/ComputerVision/Coursework2/data/bird.bmp"));
-            MBFImage plane = ImageUtilities.readMBF(new File("/Users/filipandonie/desktop/projects/ComputerVision/Coursework2/data/plane.bmp"));
-            hybridImage = makeHybrid(plane,4,bird,4);
-            image_FRAME4 = new MBFImage(bird.getWidth()*2, bird.getHeight());
-            image_FRAME4.fill(RGBColour.LIGHT_GRAY);
-            image_FRAME4.drawImage(hybridImage,0,0);
-            image_FRAME4.drawImage(ResizeProcessor.halfSize(hybridImage),hybridImage.getWidth() + 1, hybridImage.getHeight()/2);
-            image_FRAME4.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)), (int) (hybridImage.getWidth()* 1.5 + 1), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2);
-            image_FRAME4.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage))), (int) (hybridImage.getWidth()* 1.75 + 1), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)).getHeight()/2);
-            image_FRAME4.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)))), (int) (hybridImage.getWidth()* 1.875 + 1), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage))).getHeight()/2);
-            DisplayUtilities.display(image_FRAME4);
-
-            MBFImage fish = ImageUtilities.readMBF(new File("/Users/filipandonie/desktop/projects/ComputerVision/Coursework2/data/fish.bmp"));
-            MBFImage submarine = ImageUtilities.readMBF(new File("/Users/filipandonie/desktop/projects/ComputerVision/Coursework2/data/submarine.bmp"));
-            hybridImage = makeHybrid(submarine,4,fish,4);
-            image_FRAME5 = new MBFImage(fish.getWidth()*2, fish.getHeight());
-            image_FRAME5.fill(RGBColour.LIGHT_GRAY);
-            image_FRAME5.drawImage(hybridImage,0,0);
-            image_FRAME5.drawImage(ResizeProcessor.halfSize(hybridImage),hybridImage.getWidth() + 1, hybridImage.getHeight()/2);
-            image_FRAME5.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)), (int) (hybridImage.getWidth()* 1.5 + 1), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2);
-            image_FRAME5.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage))), (int) (hybridImage.getWidth()* 1.75 + 1), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)).getHeight()/2);
-            image_FRAME5.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)))), (int) (hybridImage.getWidth()* 1.875 + 1), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage))).getHeight()/2);
-            DisplayUtilities.display(image_FRAME5);
-
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+//    public static void main(String[] args) {
+//
+//        MBFImage image_FRAME1;
+//        MBFImage image_FRAME2;
+//        MBFImage image_FRAME3;
+//        MBFImage image_FRAME4;
+//        MBFImage image_FRAME5;
+//        MBFImage image_FRAME6;
+//
+//
+//        try {
+//
+//            MBFImage hybridImage;
+//
+//            MBFImage dog = ImageUtilities.readMBF(new File("/Users/filipandonie/desktop/projects/ComputerVision/Coursework2/data/dog.bmp"));
+//            MBFImage cat = ImageUtilities.readMBF(new File("/Users/filipandonie/desktop/projects/ComputerVision/Coursework2/data/cat.bmp"));
+//            hybridImage = makeHybrid(dog,10,cat,10);
+//            image_FRAME1 = new MBFImage(dog.getWidth()*2, dog.getHeight());
+//            image_FRAME1.fill(RGBColour.LIGHT_GRAY);
+//            image_FRAME1.drawImage(hybridImage,0,0);
+//            image_FRAME1.drawImage(ResizeProcessor.halfSize(hybridImage),hybridImage.getWidth() + 1, hybridImage.getHeight()/2);
+//            image_FRAME1.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)), (int) (hybridImage.getWidth()* 1.5 + 2), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2);
+//            image_FRAME1.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage))), (int) (hybridImage.getWidth()* 1.75 + 3), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)).getHeight()/2);
+//            image_FRAME1.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)))), (int) (hybridImage.getWidth()* 1.875 + 4), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage))).getHeight()/2);
+//            DisplayUtilities.display(image_FRAME1);
+//
+//            MBFImage bicycle = ImageUtilities.readMBF(new File("/Users/filipandonie/desktop/projects/ComputerVision/Coursework2/data/bicycle.bmp"));
+//            MBFImage motorcycle = ImageUtilities.readMBF(new File("/Users/filipandonie/desktop/projects/ComputerVision/Coursework2/data/motorcycle.bmp"));
+//            hybridImage = makeHybrid(motorcycle,4,bicycle,4);
+//            image_FRAME2 = new MBFImage(bicycle.getWidth()*2, motorcycle.getHeight());
+//            image_FRAME2.fill(RGBColour.LIGHT_GRAY);
+//            image_FRAME2.drawImage(hybridImage,0,0);
+//            image_FRAME2.drawImage(ResizeProcessor.halfSize(hybridImage),hybridImage.getWidth() + 1, hybridImage.getHeight()/2);
+//            image_FRAME2.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)), (int) (hybridImage.getWidth()* 1.5 + 2), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2);
+//            image_FRAME2.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage))), (int) (hybridImage.getWidth()* 1.75 + 3), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)).getHeight()/2);
+//            image_FRAME2.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)))), (int) (hybridImage.getWidth()* 1.875 + 4), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage))).getHeight()/2);
+//            DisplayUtilities.display(image_FRAME2);
+//
+//            MBFImage marilyn = ImageUtilities.readMBF(new File("/Users/filipandonie/desktop/projects/ComputerVision/Coursework2/data/marilyn.bmp"));
+//            MBFImage einstein = ImageUtilities.readMBF(new File("/Users/filipandonie/desktop/projects/ComputerVision/Coursework2/data/einstein.bmp"));
+//            hybridImage = makeHybrid(marilyn,4,einstein,4);
+//            image_FRAME3 = new MBFImage(marilyn.getWidth()*2, marilyn.getHeight());
+//            image_FRAME3.fill(RGBColour.LIGHT_GRAY);
+//            image_FRAME3.drawImage(hybridImage,0,0);
+//            image_FRAME3.drawImage(ResizeProcessor.halfSize(hybridImage),hybridImage.getWidth() + 1, hybridImage.getHeight()/2);
+//            image_FRAME3.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)), (int) (hybridImage.getWidth()* 1.5 + 2), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2);
+//            image_FRAME3.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage))), (int) (hybridImage.getWidth()* 1.75 + 3), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)).getHeight()/2);
+//            image_FRAME3.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)))), (int) (hybridImage.getWidth()* 1.875 + 4), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage))).getHeight()/2);
+//            DisplayUtilities.display(image_FRAME3);
+//
+//            MBFImage bird = ImageUtilities.readMBF(new File("/Users/filipandonie/desktop/projects/ComputerVision/Coursework2/data/bird.bmp"));
+//            MBFImage plane = ImageUtilities.readMBF(new File("/Users/filipandonie/desktop/projects/ComputerVision/Coursework2/data/plane.bmp"));
+//            hybridImage = makeHybrid(plane,4,bird,4);
+//            image_FRAME4 = new MBFImage(bird.getWidth()*2, bird.getHeight());
+//            image_FRAME4.fill(RGBColour.LIGHT_GRAY);
+//            image_FRAME4.drawImage(hybridImage,0,0);
+//            image_FRAME4.drawImage(ResizeProcessor.halfSize(hybridImage),hybridImage.getWidth() + 1, hybridImage.getHeight()/2);
+//            image_FRAME4.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)), (int) (hybridImage.getWidth()* 1.5 + 2), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2);
+//            image_FRAME4.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage))), (int) (hybridImage.getWidth()* 1.75 + 3), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)).getHeight()/2);
+//            image_FRAME4.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)))), (int) (hybridImage.getWidth()* 1.875 + 4), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage))).getHeight()/2);
+//            DisplayUtilities.display(image_FRAME4);
+//
+//            MBFImage fish = ImageUtilities.readMBF(new File("/Users/filipandonie/desktop/projects/ComputerVision/Coursework2/data/fish.bmp"));
+//            MBFImage submarine = ImageUtilities.readMBF(new File("/Users/filipandonie/desktop/projects/ComputerVision/Coursework2/data/submarine.bmp"));
+//            hybridImage = makeHybrid(submarine,4,fish,4);
+//            image_FRAME5 = new MBFImage(fish.getWidth()*2, fish.getHeight());
+//            image_FRAME5.fill(RGBColour.LIGHT_GRAY);
+//            image_FRAME5.drawImage(hybridImage,0,0);
+//            image_FRAME5.drawImage(ResizeProcessor.halfSize(hybridImage),hybridImage.getWidth() + 1, hybridImage.getHeight()/2);
+//            image_FRAME5.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)), (int) (hybridImage.getWidth()* 1.5 + 2), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2);
+//            image_FRAME5.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage))), (int) (hybridImage.getWidth()* 1.75 + 3), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)).getHeight()/2);
+//            image_FRAME5.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)))), (int) (hybridImage.getWidth()* 1.875 + 4), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage))).getHeight()/2);
+//            DisplayUtilities.display(image_FRAME5);
+//
+//            MBFImage trump = ImageUtilities.readMBF(new File("/Users/filipandonie/desktop/projects/ComputerVision/Coursework2/data/trump.jpg"));
+//            MBFImage boris = ImageUtilities.readMBF(new File("/Users/filipandonie/desktop/projects/ComputerVision/Coursework2/data/boris.jpg"));
+//            hybridImage = makeHybrid(boris,4,trump,5);
+//            image_FRAME6 = new MBFImage(trump.getWidth()*2, boris.getHeight());
+//            image_FRAME6.fill(RGBColour.LIGHT_GRAY);
+//            image_FRAME6.drawImage(hybridImage,0,0);
+//            image_FRAME6.drawImage(ResizeProcessor.halfSize(hybridImage),hybridImage.getWidth() + 1, hybridImage.getHeight()/2);
+//            image_FRAME6.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)), (int) (hybridImage.getWidth()* 1.5 + 2), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2);
+//            image_FRAME6.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage))), (int) (hybridImage.getWidth()* 1.75 + 3), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)).getHeight()/2);
+//            image_FRAME6.drawImage(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)))), (int) (hybridImage.getWidth()* 1.875 + 4), hybridImage.getHeight()/2 + ResizeProcessor.halfSize(hybridImage).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage)).getHeight()/2 + ResizeProcessor.halfSize(ResizeProcessor.halfSize(ResizeProcessor.halfSize(hybridImage))).getHeight()/2);
+//            DisplayUtilities.display(image_FRAME6);
+//
+//
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 }

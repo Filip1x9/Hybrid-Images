@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="65a50ee0-9de5-473d-80fd-bd51d16ef49a" name="Default Changelist" comment="" />
+    <list default="true" id="65a50ee0-9de5-473d-80fd-bd51d16ef49a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/ac/soton/ecs/fa2u17/hybridimages/MyHybridImages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/ac/soton/ecs/fa2u17/hybridimages/MyHybridImages.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/soton/ecs/fa2u17/hybridimages/MyConvolution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="554">
-              <caret line="78" selection-start-line="78" selection-end-line="78" />
+            <state>
+              <caret column="20" selection-start-column="20" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -26,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/soton/ecs/fa2u17/hybridimages/MyHybridImages.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-502">
-              <caret line="97" column="30" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="30" />
+            <state relative-caret-position="2640">
+              <caret line="176" column="2" lean-forward="true" selection-start-line="176" selection-start-column="2" selection-end-line="176" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -53,14 +55,14 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/uk/ac/soton/ecs/fa2u17/hybridimages/App.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/soton/ecs/fa2u17/hybridimages/MyHybridImages.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/ac/soton/ecs/fa2u17/hybridimages/MyConvolution.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/soton/ecs/fa2u17/hybridimages/MyHybridImages.java" />
       </list>
     </option>
   </component>
@@ -104,8 +106,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -176,16 +178,18 @@
       <workItem from="1572551869451" duration="1523000" />
       <workItem from="1572647535550" duration="19158000" />
       <workItem from="1572782028174" duration="277000" />
+      <workItem from="1572782513826" duration="4605000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20958000" />
+    <option name="totallyTimeSpent" value="25563000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25767368" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26171243" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -222,10 +226,11 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/soton/ecs/fa2u17/hybridimages/App.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/soton/ecs/fa2u17/hybridimages/App.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/soton/ecs/fa2u17/hybridimages/MyHybridImages.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1455">
-          <caret line="108" column="36" selection-start-line="108" selection-start-column="36" selection-end-line="108" selection-end-column="36" />
+        <state relative-caret-position="2640">
+          <caret line="176" column="2" lean-forward="true" selection-start-line="176" selection-start-column="2" selection-end-line="176" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -234,18 +239,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/soton/ecs/fa2u17/hybridimages/MyConvolution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="78" selection-start-line="78" selection-end-line="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/soton/ecs/fa2u17/hybridimages/MyHybridImages.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-502">
-          <caret line="97" column="30" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="30" />
+        <state>
+          <caret column="20" selection-start-column="20" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
